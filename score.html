@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="th">
+    <head>
+        <meta charset="UTF-8">
+        <title>ลงคะแนน Miss Grand Mahanakorn</title>
+        <style>
+    body { font-family: sans-serif; padding: 20px; }
+    table { width: 100%; border-collapse: collapse; text-align: center; }
+    th, td { border: 1px solid #ccc; padding: 8px; }
+    th { background-color: #fdd; }
+    input[type="number"] { width: 60px; }
+  </style>
+    </head>
+    <body>
+        <h2>แบบฟอร์มลงคะแนน <span style="color: deeppink">Miss Grand Mahanakorn</span></h2>
+        <p><strong>กรรมการ:</strong> <span id="displayCommitteeName"></span></p>
+
+        <form id="score-form">
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2">หมายเลข</th>
+                        <th rowspan="2">ชื่อผู้เข้าแข่งขัน</th>
+                        <th colspan="5">หัวข้อการให้คะแนน</th>
+                        <th rowspan="2">รวม</th>
+                    </tr>
+                    <tr>
+                        <th>การแต่งกาย<br>(20)</th>
+                        <th>ความคิดสร้างสรรค์<br>(20)</th>
+                        <th>บุคลิกภาพ + มารยาท<br>(20)</th>
+                        <th>ความเชื่อมั่น<br>(10)</th>
+                        <th>การพูด<br>(10)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td><td>Sasha Whiterose</td>
+                        <td><input type="number" name="dress1" min="0" max="20"
+                                required oninput="updateTotal(1)"></td>
+                        <td><input type="number" name="creative1" min="0"
+                                max="20" required oninput="updateTotal(1)"></td>
+                        <td><input type="number" name="personality1" min="0"
+                                max="20" required oninput="updateTotal(1)"></td>
+                        <td><input type="number" name="confidence1" min="0"
+                                max="10" required oninput="updateTotal(1)"></td>
+                        <td><input type="number" name="speech1" min="0" max="10"
+                                required oninput="updateTotal(1)"></td>
+                        <td><span id="total1">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td><td>Kyra Lillie</td>
+                        <td><input type="number" name="dress2" min="0" max="20"
+                                required oninput="updateTotal(2)"></td>
+                        <td><input type="number" name="creative2" min="0"
+                                max="20" required oninput="updateTotal(2)"></td>
+                        <td><input type="number" name="personality2" min="0"
+                                max="20" required oninput="updateTotal(2)"></td>
+                        <td><input type="number" name="confidence2" min="0"
+                                max="10" required oninput="updateTotal(2)"></td>
+                        <td><input type="number" name="speech2" min="0" max="10"
+                                required oninput="updateTotal(2)"></td>
+                        <td><span id="total2">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td><td>Sakura Mammoth</td>
+                        <td><input type="number" name="dress3" min="0" max="20"
+                                required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="creative3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="personality3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="confidence3" min="0"
+                                max="10" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="speech3" min="0" max="10"
+                                required oninput="updateTotal(3)"></td>
+                        <td><span id="total3">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td><td>Nongpalah Maleawkub</td>
+                        <td><input type="number" name="dress3" min="0" max="20"
+                                required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="creative3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="personality3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="confidence3" min="0"
+                                max="10" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="speech3" min="0" max="10"
+                                required oninput="updateTotal(3)"></td>
+                        <td><span id="total3">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td><td>Pan Wythe</td>
+                        <td><input type="number" name="dress3" min="0" max="20"
+                                required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="creative3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="personality3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="confidence3" min="0"
+                                max="10" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="speech3" min="0" max="10"
+                                required oninput="updateTotal(3)"></td>
+                        <td><span id="total3">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td><td>Meen Basato</td>
+                        <td><input type="number" name="dress3" min="0" max="20"
+                                required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="creative3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="personality3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="confidence3" min="0"
+                                max="10" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="speech3" min="0" max="10"
+                                required oninput="updateTotal(3)"></td>
+                        <td><span id="total3">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td><td>Ivyy natacha</td>
+                        <td><input type="number" name="dress3" min="0" max="20"
+                                required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="creative3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="personality3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="confidence3" min="0"
+                                max="10" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="speech3" min="0" max="10"
+                                required oninput="updateTotal(3)"></td>
+                        <td><span id="total3">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td><td>Gummy Scalet</td>
+                        <td><input type="number" name="dress3" min="0" max="20"
+                                required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="creative3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="personality3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="confidence3" min="0"
+                                max="10" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="speech3" min="0" max="10"
+                                required oninput="updateTotal(3)"></td>
+                        <td><span id="total3">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>9</td><td style="font-weight: bold;"> สละสิทธิ์
+                        </td>
+                        <td><input type="number" name="dress3" min="0" max="20"
+                                required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="creative3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="personality3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="confidence3" min="0"
+                                max="10" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="speech3" min="0" max="10"
+                                required oninput="updateTotal(3)"></td>
+                        <td><span id="total3">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>10</td><td>Blue Suwannaweth</td>
+                        <td><input type="number" name="dress3" min="0" max="20"
+                                required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="creative3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="personality3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="confidence3" min="0"
+                                max="10" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="speech3" min="0" max="10"
+                                required oninput="updateTotal(3)"></td>
+                        <td><span id="total3">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>11</td><td>Nene Jraaaaa</td>
+                        <td><input type="number" name="dress3" min="0" max="20"
+                                required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="creative3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="personality3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="confidence3" min="0"
+                                max="10" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="speech3" min="0" max="10"
+                                required oninput="updateTotal(3)"></td>
+                        <td><span id="total3">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>12</td><td>IRENE Morgan</td>
+                        <td><input type="number" name="dress3" min="0" max="20"
+                                required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="creative3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="personality3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="confidence3" min="0"
+                                max="10" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="speech3" min="0" max="10"
+                                required oninput="updateTotal(3)"></td>
+                        <td><span id="total3">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>13</td><td>Bloody Heizenberg</td>
+                        <td><input type="number" name="dress3" min="0" max="20"
+                                required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="creative3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="personality3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="confidence3" min="0"
+                                max="10" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="speech3" min="0" max="10"
+                                required oninput="updateTotal(3)"></td>
+                        <td><span id="total3">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>14</td><td>Irene Liss Ellie</td>
+                        <td><input type="number" name="dress3" min="0" max="20"
+                                required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="creative3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="personality3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="confidence3" min="0"
+                                max="10" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="speech3" min="0" max="10"
+                                required oninput="updateTotal(3)"></td>
+                        <td><span id="total3">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>15</td><td>Kankeaw Maimeehuajai</td>
+                        <td><input type="number" name="dress3" min="0" max="20"
+                                required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="creative3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="personality3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="confidence3" min="0"
+                                max="10" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="speech3" min="0" max="10"
+                                required oninput="updateTotal(3)"></td>
+                        <td><span id="total3">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>16</td><td>Yuki Unknow</td>
+                        <td><input type="number" name="dress3" min="0" max="20"
+                                required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="creative3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="personality3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="confidence3" min="0"
+                                max="10" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="speech3" min="0" max="10"
+                                required oninput="updateTotal(3)"></td>
+                        <td><span id="total3">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>17</td><td>Ahoii Lionheart</td>
+                        <td><input type="number" name="dress3" min="0" max="20"
+                                required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="creative3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="personality3" min="0"
+                                max="20" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="confidence3" min="0"
+                                max="10" required oninput="updateTotal(3)"></td>
+                        <td><input type="number" name="speech3" min="0" max="10"
+                                required oninput="updateTotal(3)"></td>
+                        <td><span id="total3">0</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <button type="submit">ส่งคะแนน</button>
+            <button type="button" onclick="window.history.back()">กลับ</button>
+        </form>
+
+        <script src="score.js"></script>
+    </body>
+</html>
