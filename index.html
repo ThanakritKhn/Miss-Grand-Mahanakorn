@@ -1,18 +1,69 @@
 <!DOCTYPE html>
 <html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <title>ลงคะแนน Miss Grand Mahanakorn</title>
-  <style>
-    body { font-family: sans-serif; padding: 20px; }
+  <head>
+    <meta charset="UTF-8">
+    <title>ลงคะแนน Miss Grand Mahanakorn</title>
+    <!-- Bootstrap 5 CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16"
+      href="Logo/MHNK MISS GRAND.png" />
+    <style>
+    body {
+      min-height: 100vh;
+      min-width: 100vw;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background: url('/Logo/Miss Back.png') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+    .card {
+      border-radius: 1.5rem;
+      box-shadow: 0 2px 20px 0 #ffd0e9b3;
+      background: rgba(255, 255, 255, 0.90);
+      backdrop-filter: blur(2px);
+    }
   </style>
-</head>
-<body>
-  <div>
-    <h2>กรุณากรอกชื่อคณะกรรมการ</h2>
-    <input type="text" id="committeeName" placeholder="ชื่อกรรมการ" required>
-    <button id="startBtn">เริ่มลงคะแนน</button>
-  </div>
-  <script src="index.js"></script>
-</body>
+  </head>
+  <body>
+    <div
+      class="container d-flex flex-column justify-content-center align-items-center min-vh-100">
+      <div class="card p-4 shadow" style="min-width:320px; max-width: 400px;">
+        <!-- โลโก้ตรงกลาง -->
+        <div class="mb-3 text-center">
+          <img src="/Logo/MHNK MISS GRAND.png" alt="MHNK Miss Grand Logo"
+            style="max-width:180px; width:100%; height:auto;">
+        </div>
+        <h2 class="mb-4 text-center"
+          style="color: deeppink;">กรุณากรอกชื่อคณะกรรมการ</h2>
+        <div class="mb-3">
+          <input type="text" class="form-control text-center" id="committeeName"
+            placeholder="ชื่อกรรมการ" required>
+        </div>
+        <div class="d-grid">
+          <button id="startBtn" class="btn btn-primary btn-lg"
+            style="background: deeppink; border: none;">เริ่มลงคะแนน</button>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
