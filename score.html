@@ -3,7 +3,7 @@
 
 <head>
         <meta charset="UTF-8">
-        <title>แบบฟอร์มลงคะแนน Miss Grand Mahanakorn</title>
+        <title>แบบฟอร์มลงคะแนน Mahanakorn Sing Talent 2025</title>
         <!-- Bootstrap 5 -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="icon" type="image/png" sizes="16x16" href="Logo/MHNK MISS GRAND.png" />
@@ -11,8 +11,8 @@
                 body {
                         min-height: 100vh;
                         margin: 0;
-                        font-family: sans-serif;
-                        background: #fff7fa;
+                        font-family: 'Prompt', 'Kanit', 'Segoe UI', Arial, sans-serif;
+                        background: linear-gradient(120deg, #e3f0fd 0%, #b3e0ff 70%, #2196f3 100%);
                         overflow-x: hidden;
                 }
 
@@ -23,8 +23,8 @@
                         height: 100vh;
                         z-index: 0;
                         background: url('Logo/Miss Back.png') center center / cover no-repeat;
-                        filter: blur(8px) brightness(0.7) saturate(1.2);
-                        opacity: 0.4;
+                        filter: blur(8px) brightness(0.85) saturate(1.15);
+                        opacity: 0.25;
                         pointer-events: none;
                 }
 
@@ -32,7 +32,7 @@
                         position: fixed;
                         inset: 0;
                         z-index: 1;
-                        background: rgba(255, 255, 255, 0.6);
+                        background: rgba(255, 255, 255, 0.60);
                         pointer-events: none;
                 }
 
@@ -43,63 +43,329 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        padding: 2rem 0;
                 }
 
                 .card {
                         border-radius: 2rem;
-                        box-shadow: 0 2px 24px 0 #ffd0e9c8;
-                        background: rgba(255, 255, 255, 0.98);
+                        box-shadow: 0 4px 40px 0 #1976d230, 0 1.5px 10px #2196f348;
+                        background: rgba(255, 255, 255, 0.97);
                         margin: auto;
                         width: 100%;
-                        max-width: 1100px;
-                        padding: 2rem 1.5rem;
+                        max-width: 1060px;
+                        padding: 2.3rem 1.1rem 2.3rem 1.1rem;
+                        border: 1.8px solid #90caf9;
+                        backdrop-filter: blur(5px);
+                        animation: fadein 0.8s cubic-bezier(.33, 1.39, .73, 1.04);
+                }
+
+                @keyframes fadein {
+                        from {
+                                transform: translateY(50px) scale(.97);
+                                opacity: 0;
+                        }
+
+                        to {
+                                transform: none;
+                                opacity: 1;
+                        }
+                }
+
+                h2 {
+                        color: #1976d2;
+                        font-weight: 800;
+                        letter-spacing: .2px;
+                        font-size: 1.45rem;
+                }
+
+                .card h2 span {
+                        color: #1976d2;
+                        font-weight: 900;
                 }
 
                 th {
-                        background-color: #ffe0ef !important;
-                        color: #c2185b;
+                        background-color: #e3f0fd !important;
+                        color: #1976d2 !important;
+                        font-size: 1.09rem;
+                        border-top: none !important;
+                        font-weight: 700;
+                        border-bottom: 2.5px solid #90caf9;
+                        letter-spacing: .1px;
+                }
+
+                td {
+                        background: #f5fafd !important;
+                        border-bottom: 1.2px solid #90caf9 !important;
+                        color: #1976d2;
+                        font-size: 1.07rem;
+                        font-weight: 600;
                 }
 
                 .table input[type="number"] {
                         width: 60px;
                         text-align: center;
                         margin: auto;
+                        background: #e3f1fa;
+                        border: 1.5px solid #90caf9;
+                        color: #1976d2;
+                        border-radius: 1rem;
+                        font-size: 1rem;
+                        font-weight: 600;
+                        outline: none;
+                        transition: border .18s;
+                        box-shadow: 0 1px 6px #90caf925;
+                }
+
+                .table input[type="number"]:focus {
+                        border-color: #1976d2;
+                        background: #e3f0fd;
+                        color: #0d47a1;
+                }
+
+                .table-responsive {
+                        border-radius: 1.5rem;
+                        overflow: hidden;
+                        box-shadow: 0 2px 12px #90caf92e;
+                        background: #f5fafd;
                 }
 
                 .btn-pink {
-                        background: deeppink;
+                        background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
                         border: none;
                         color: #fff;
-                        transition: background 0.2s;
+                        font-weight: 600;
+                        border-radius: 1.1rem;
+                        font-size: 1.11rem;
+                        padding: .7rem 0;
+                        box-shadow: 0 2px 10px #90caf97c;
+                        transition: background 0.15s;
                 }
 
-                .btn-pink:hover {
-                        background: #c2185b;
-                        color: #fff;
+                .btn-pink:hover,
+                .btn-pink:active {
+                        background: linear-gradient(90deg, #1565c0 80%, #2196f3 100%) !important;
+                        color: #fff !important;
+                }
+
+                .btn-secondary {
+                        border-radius: 1.1rem !important;
+                        background: #90caf9 !important;
+                        color: #1976d2 !important;
+                        border: none !important;
+                        font-weight: 600;
+                        box-shadow: 0 1.5px 10px #2196f335;
+                        transition: background 0.13s;
+                }
+
+                .btn-secondary:hover,
+                .btn-secondary:active {
+                        background: #1976d2 !important;
+                        color: #fff !important;
+                }
+
+                .d-flex.gap-3>* {
+                        min-width: 120px;
                 }
 
                 @media (max-width: 900px) {
                         .card {
-                                padding: 0.5rem;
+                                padding: 1.2rem .4rem;
                         }
 
                         .table-responsive {
                                 font-size: 0.97rem;
                         }
+
+                        th,
+                        td {
+                                font-size: 0.96rem;
+                        }
                 }
 
-                /* Center everything on small screens */
                 @media (max-width: 600px) {
                         .main-content {
-                                padding: 1rem 0;
+                                padding: 0.5rem 0;
                         }
 
                         .card {
-                                padding: 0.5rem 0.1rem;
+                                padding: .6rem .05rem 1.2rem .05rem;
+                                border-radius: 1.1rem;
                         }
 
                         h2 {
-                                font-size: 1.2rem;
+                                font-size: 1.1rem;
+                        }
+
+                        .table input[type="number"] {
+                                width: 38px;
+                                font-size: 0.93rem;
+                        }
+
+                        th,
+                        td {
+                                font-size: 0.91rem;
+                        }
+                }
+
+                #confirmModal {
+                        position: fixed;
+                        inset: 0;
+                        z-index: 1111;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                }
+
+                #confirmModal .modal-backdrop {
+                        position: fixed;
+                        inset: 0;
+                        background: #222b44c7;
+                        backdrop-filter: blur(2.5px);
+                        z-index: 0;
+                }
+
+                #confirmModal .modal-card {
+                        position: relative;
+                        background: #fff;
+                        border-radius: 1.5rem;
+                        box-shadow: 0 8px 48px #1976d25a, 0 2px 8px #2196f37c;
+                        z-index: 2;
+                        width: 95vw;
+                        max-width: 410px;
+                        padding: 2.1em 1.4em 1.2em 1.4em;
+                        animation: popin .21s cubic-bezier(.34, 1.2, .72, 1.01);
+                }
+
+                @keyframes popin {
+                        from {
+                                transform: scale(.93) translateY(30px);
+                                opacity: .3;
+                        }
+
+                        to {
+                                transform: none;
+                                opacity: 1;
+                        }
+                }
+
+                #confirmModal .modal-header h4 {
+                        margin: 0 0 .5em 0;
+                        color: #1976d2;
+                        font-weight: bold;
+                        font-size: 1.21rem;
+                        text-align: center;
+                }
+
+                #confirmModal .modal-body {
+                        text-align: center;
+                }
+
+                #confirmModal .modal-footer {
+                        display: flex;
+                        justify-content: center;
+                        gap: 1.5em;
+                        margin-top: 1.2em;
+                }
+
+                #modalCancel {
+                        background: #90caf9 !important;
+                        color: #1976d2 !important;
+                        font-weight: 600;
+                        border-radius: .9em !important;
+                        min-width: 96px;
+                }
+
+                #modalCancel:hover {
+                        background: #1976d2 !important;
+                        color: #fff !important;
+                }
+
+                #modalOk {
+                        background: linear-gradient(90deg, #1976d2 70%, #42a5f5 100%) !important;
+                        color: #fff !important;
+                        font-weight: 700;
+                        border-radius: .9em !important;
+                        min-width: 96px;
+                        box-shadow: 0 2px 14px #90caf97c;
+                }
+
+                #modalOk:hover {
+                        background: #1565c0 !important;
+                        color: #fff !important;
+                }
+
+                #customAlert {
+                        position: fixed;
+                        inset: 0;
+                        z-index: 3333;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: rgba(30, 50, 90, .13);
+                        backdrop-filter: blur(2.5px);
+                }
+
+                .custom-alert-card {
+                        background: #fff;
+                        border-radius: 1.4em;
+                        box-shadow: 0 4px 32px #2196f37d, 0 1.5px 8px #1976d236;
+                        min-width: 265px;
+                        max-width: 95vw;
+                        text-align: center;
+                        padding: 2em 1.3em 1.3em 1.3em;
+                        animation: popalert .25s cubic-bezier(.34, 1.2, .72, 1.01);
+                        position: relative;
+                }
+
+                @keyframes popalert {
+                        from {
+                                transform: scale(.95) translateY(18px);
+                                opacity: .4;
+                        }
+
+                        to {
+                                transform: none;
+                                opacity: 1;
+                        }
+                }
+
+                .icon-success {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 1em;
+                }
+
+                .icon-success svg {
+                        display: block;
+                }
+
+                .custom-alert-msg {
+                        font-size: 1.13rem;
+                        margin-bottom: 1.4em;
+                        color: #1976d2;
+                        font-weight: 500;
+                }
+
+                #closeAlertBtn {
+                        background: linear-gradient(90deg, #1976d2 70%, #42a5f5 100%) !important;
+                        color: #fff !important;
+                        font-weight: 700;
+                        border-radius: .95em !important;
+                        min-width: 105px;
+                        box-shadow: 0 1px 7px #90caf97c;
+                        font-size: 1.05rem;
+                        border: none;
+                }
+
+                #closeAlertBtn:hover {
+                        background: #1565c0 !important;
+                }
+
+                @media (max-width: 500px) {
+                        .custom-alert-card {
+                                min-width: 160px;
+                                font-size: 0.99rem;
                         }
                 }
         </style>
@@ -112,693 +378,271 @@
                 <div class="container d-flex flex-column justify-content-center align-items-center"
                         style="min-height: 100vh;">
                         <div class="card shadow-lg">
-                                <h2 class="mb-3 text-center" style="color: deeppink;">
-                                        แบบฟอร์มลงคะแนน <span style="color: #c2185b;">Miss
-                                                Grand Mahanakorn</span>
+                                <h2 class="mb-3 text-center">
+                                        แบบฟอร์มลงคะแนน <span>Mahanakorn Sing Talent 2025</span>
                                 </h2>
-                                <p class="text-center mb-4"><strong>กรรมการ:</strong>
+                                <p class="text-center mb-4" style="color:#1976d2;font-weight:600;">
+                                        <strong>กรรมการ:</strong>
                                         <span id="displayCommitteeName"></span>
                                 </p>
 
                                 <form id="score-form">
                                         <div class="table-responsive">
-
-                                                <form id="score-form">
-                                                        <div class="table-responsive">
-                                                                <table class="table table-bordered align-middle">
-                                                                        <thead>
-                                                                                <tr>
-                                                                                        <th rowspan="2">หมายเลข</th>
-                                                                                        <th rowspan="2">
-                                                                                                ชื่อผู้เข้าแข่งขัน</th>
-                                                                                        <th colspan="5">
-                                                                                                หัวข้อการให้คะแนน</th>
-                                                                                        <th rowspan="2">รวม</th>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <th>การแต่งกาย<br>(20)</th>
-                                                                                        <th>ความคิดสร้างสรรค์<br>(20)
-                                                                                        </th>
-                                                                                        <th>บุคลิกภาพ
-                                                                                                +
-                                                                                                มารยาท<br>(20)</th>
-                                                                                        <th>ความเชื่อมั่น<br>(10)</th>
-                                                                                        <th>การพูด<br>(10)</th>
-                                                                                </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                                <tr>
-                                                                                        <td>1</td>
-                                                                                        <td>Sasha
-                                                                                                Whiterose</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress1"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(1)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative1"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(1)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality1"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(1)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence1"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(1)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech1"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(1)">
-                                                                                        </td>
-                                                                                        <td><span id="total1">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <td>2</td>
-                                                                                        <td>Kyra
-                                                                                                Lillie</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress2"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(2)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative2"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(2)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality2"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(2)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence2"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(2)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech2"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(2)">
-                                                                                        </td>
-                                                                                        <td><span id="total2">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <td>3</td>
-                                                                                        <td>Sakura
-                                                                                                Mammoth</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress3"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(3)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative3"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(3)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality3"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(3)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence3"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(3)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech3"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(3)">
-                                                                                        </td>
-                                                                                        <td><span id="total3">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <td>4</td>
-                                                                                        <td>Nongpalah
-                                                                                                Maleawkub</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress4"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(4)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative4"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(4)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality4"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(4)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence4"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(4)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech4"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(4)">
-                                                                                        </td>
-                                                                                        <td><span id="total4">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <td>5</td>
-                                                                                        <td>Pan
-                                                                                                Wythe</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress5"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(5)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative5"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(5)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality5"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(5)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence5"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(5)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech5"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(5)">
-                                                                                        </td>
-                                                                                        <td><span id="total5">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <td>6</td>
-                                                                                        <td>Meen
-                                                                                                Basato</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress6"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(6)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative6"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(6)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality6"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(6)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence6"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(6)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech6"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(6)">
-                                                                                        </td>
-                                                                                        <td><span id="total6">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <td>7</td>
-                                                                                        <td>Ivyy
-                                                                                                natacha</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress7"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(7)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative7"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(7)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality7"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(7)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence7"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(7)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech7"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(7)">
-                                                                                        </td>
-                                                                                        <td><span id="total7">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <td>8</td>
-                                                                                        <td>Gummy
-                                                                                                Scalet</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress8"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(8)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative8"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(8)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality8"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(8)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence8"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(8)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech8"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(8)">
-                                                                                        </td>
-                                                                                        <td><span id="total8">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <td>9</td>
-                                                                                        <td style="font-weight: bold;">
-                                                                                                สละสิทธิ์</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress9"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(9)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative9"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(9)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality9"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(9)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence9"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(9)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech9"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(9)">
-                                                                                        </td>
-                                                                                        <td><span id="total9">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <td>10</td>
-                                                                                        <td>Blue
-                                                                                                Suwannaweth</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress10"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(10)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative10"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(10)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality10"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(10)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence10"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(10)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech10"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(10)">
-                                                                                        </td>
-                                                                                        <td><span id="total10">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <td>11</td>
-                                                                                        <td>Nene
-                                                                                                Jraaaaa</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress11"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(11)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative11"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(11)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality11"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(11)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence11"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(11)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech11"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(11)">
-                                                                                        </td>
-                                                                                        <td><span id="total11">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <td>12</td>
-                                                                                        <td>IRENE
-                                                                                                Morgan</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress12"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(12)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative12"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(12)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality12"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(12)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence12"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(12)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech12"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(12)">
-                                                                                        </td>
-                                                                                        <td><span id="total12">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <td>13</td>
-                                                                                        <td>Bloody
-                                                                                                Heizenberg</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress13"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(13)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative13"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(13)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality13"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(13)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence13"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(13)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech13"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(13)">
-                                                                                        </td>
-                                                                                        <td><span id="total13">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <td>14</td>
-                                                                                        <td>Irene
-                                                                                                Liss
-                                                                                                Ellie</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress14"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(14)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative14"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(14)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality14"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(14)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence14"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(14)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech14"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(14)">
-                                                                                        </td>
-                                                                                        <td><span id="total14">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <td>15</td>
-                                                                                        <td>Kankeaw
-                                                                                                Maimeehuajai</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress15"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(15)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative15"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(15)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality15"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(15)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence15"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(15)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech15"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(15)">
-                                                                                        </td>
-                                                                                        <td><span id="total15">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <td>16</td>
-                                                                                        <td>Yuki
-                                                                                                Unknow</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress16"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(16)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative16"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(16)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality16"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(16)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence16"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(16)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech16"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(16)">
-                                                                                        </td>
-                                                                                        <td><span id="total16">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                        <td>17</td>
-                                                                                        <td>Ahoii
-                                                                                                Lionheart</td>
-                                                                                        <td><input type="number"
-                                                                                                        name="dress17"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(17)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="creative17"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(17)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="personality17"
-                                                                                                        min="0" max="20"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(17)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="confidence17"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(17)">
-                                                                                        </td>
-                                                                                        <td><input type="number"
-                                                                                                        name="speech17"
-                                                                                                        min="0" max="10"
-                                                                                                        class="form-control"
-                                                                                                        oninput="updateTotal(17)">
-                                                                                        </td>
-                                                                                        <td><span id="total17">0</span>
-                                                                                        </td>
-                                                                                </tr>
-                                                                        </tbody>
-                                                                </table>
-                                                        </div>
-                                                        <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
-                                                                <button type="submit"
-                                                                        class="btn btn-pink btn-lg px-5">ส่งคะแนน</button>
-                                                                <button type="button"
-                                                                        class="btn btn-secondary btn-lg px-5"
-                                                                        onclick="window.history.back()">กลับ</button>
-                                                                <button type="button" id="testBtn"
-                                                                        class="btn btn-secondary ms-2"
-                                                                        style="background: #1976d2; color: #fff;">
-                                                                        Test ส่งคะแนน
-                                                                </button>
-
-                                                        </div>
-                                                </form>
+                                                <table class="table table-bordered align-middle mb-0">
+                                                        <thead>
+                                                                <tr>
+                                                                        <th>หมายเลข</th>
+                                                                        <th>ชื่อผู้เข้าแข่งขัน</th>
+                                                                        <th>การแต่งกาย<br></th>
+                                                                        <th>ความคิดสร้างสรรค์<br></th>
+                                                                        <th>รวม</th>
+                                                                </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                                <tr>
+                                                                        <td>1</td>
+                                                                        <td>Nene Jraaaaa</td>
+                                                                        <td><input type="number" name="dress1" min="0"
+                                                                                        max="20" class="form-control"
+                                                                                        oninput="updateTotal(1)"></td>
+                                                                        <td><input type="number" name="creative1"
+                                                                                        min="0" max="20"
+                                                                                        class="form-control"
+                                                                                        oninput="updateTotal(1)"></td>
+                                                                        <td><span id="total1">0</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>2</td>
+                                                                        <td>John Win</td>
+                                                                        <td><input type="number" name="dress2" min="0"
+                                                                                        max="20" class="form-control"
+                                                                                        oninput="updateTotal(2)"></td>
+                                                                        <td><input type="number" name="creative2"
+                                                                                        min="0" max="20"
+                                                                                        class="form-control"
+                                                                                        oninput="updateTotal(2)"></td>
+                                                                        <td><span id="total2">0</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>3</td>
+                                                                        <td>Auto Kill Omarterna</td>
+                                                                        <td><input type="number" name="dress3" min="0"
+                                                                                        max="20" class="form-control"
+                                                                                        oninput="updateTotal(3)"></td>
+                                                                        <td><input type="number" name="creative3"
+                                                                                        min="0" max="20"
+                                                                                        class="form-control"
+                                                                                        oninput="updateTotal(3)"></td>
+                                                                        <td><span id="total3">0</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>4</td>
+                                                                        <td>Jennastalyst Bishop</td>
+                                                                        <td><input type="number" name="dress4" min="0"
+                                                                                        max="20" class="form-control"
+                                                                                        oninput="updateTotal(4)"></td>
+                                                                        <td><input type="number" name="creative4"
+                                                                                        min="0" max="20"
+                                                                                        class="form-control"
+                                                                                        oninput="updateTotal(4)"></td>
+                                                                        <td><span id="total4">0</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>5</td>
+                                                                        <td>Tathuadin Band</td>
+                                                                        <td><input type="number" name="dress5" min="0"
+                                                                                        max="20" class="form-control"
+                                                                                        oninput="updateTotal(5)"></td>
+                                                                        <td><input type="number" name="creative5"
+                                                                                        min="0" max="20"
+                                                                                        class="form-control"
+                                                                                        oninput="updateTotal(5)"></td>
+                                                                        <td><span id="total5">0</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>6</td>
+                                                                        <td>NaiBao Winston</td>
+                                                                        <td><input type="number" name="dress6" min="0"
+                                                                                        max="20" class="form-control"
+                                                                                        oninput="updateTotal(6)"></td>
+                                                                        <td><input type="number" name="creative6"
+                                                                                        min="0" max="20"
+                                                                                        class="form-control"
+                                                                                        oninput="updateTotal(6)"></td>
+                                                                        <td><span id="total6">0</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>7</td>
+                                                                        <td>Liss Cascio</td>
+                                                                        <td><input type="number" name="dress7" min="0"
+                                                                                        max="20" class="form-control"
+                                                                                        oninput="updateTotal(7)"></td>
+                                                                        <td><input type="number" name="creative7"
+                                                                                        min="0" max="20"
+                                                                                        class="form-control"
+                                                                                        oninput="updateTotal(7)"></td>
+                                                                        <td><span id="total7">0</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>8</td>
+                                                                        <td>FlukeFic Jimiko</td>
+                                                                        <td><input type="number" name="dress8" min="0"
+                                                                                        max="20" class="form-control"
+                                                                                        oninput="updateTotal(8)"></td>
+                                                                        <td><input type="number" name="creative8"
+                                                                                        min="0" max="20"
+                                                                                        class="form-control"
+                                                                                        oninput="updateTotal(8)"></td>
+                                                                        <td><span id="total8">0</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>9</td>
+                                                                        <td>JubJang JJ</td>
+                                                                        <td><input type="number" name="dress9" min="0"
+                                                                                        max="20" class="form-control"
+                                                                                        oninput="updateTotal(9)"></td>
+                                                                        <td><input type="number" name="creative9"
+                                                                                        min="0" max="20"
+                                                                                        class="form-control"
+                                                                                        oninput="updateTotal(9)"></td>
+                                                                        <td><span id="total9">0</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>10</td>
+                                                                        <td>Sakura Mammoth</td>
+                                                                        <td><input type="number" name="dress10" min="0"
+                                                                                        max="20" class="form-control"
+                                                                                        oninput="updateTotal(10)"></td>
+                                                                        <td><input type="number" name="creative10"
+                                                                                        min="0" max="20"
+                                                                                        class="form-control"
+                                                                                        oninput="updateTotal(10)"></td>
+                                                                        <td><span id="total10">0</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>11</td>
+                                                                        <td>Blue Suwannaweth</td>
+                                                                        <td><input type="number" name="dress11" min="0"
+                                                                                        max="20" class="form-control"
+                                                                                        oninput="updateTotal(11)"></td>
+                                                                        <td><input type="number" name="creative11"
+                                                                                        min="0" max="20"
+                                                                                        class="form-control"
+                                                                                        oninput="updateTotal(11)"></td>
+                                                                        <td><span id="total11">0</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>12</td>
+                                                                        <td>irene morgan</td>
+                                                                        <td><input type="number" name="dress12" min="0"
+                                                                                        max="20" class="form-control"
+                                                                                        oninput="updateTotal(12)"></td>
+                                                                        <td><input type="number" name="creative12"
+                                                                                        min="0" max="20"
+                                                                                        class="form-control"
+                                                                                        oninput="updateTotal(12)"></td>
+                                                                        <td><span id="total12">0</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>13</td>
+                                                                        <td>Namsom Howhe</td>
+                                                                        <td><input type="number" name="dress13" min="0"
+                                                                                        max="20" class="form-control"
+                                                                                        oninput="updateTotal(13)"></td>
+                                                                        <td><input type="number" name="creative13"
+                                                                                        min="0" max="20"
+                                                                                        class="form-control"
+                                                                                        oninput="updateTotal(13)"></td>
+                                                                        <td><span id="total13">0</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>14</td>
+                                                                        <td>Mewyu Watanabe</td>
+                                                                        <td><input type="number" name="dress14" min="0"
+                                                                                        max="20" class="form-control"
+                                                                                        oninput="updateTotal(14)"></td>
+                                                                        <td><input type="number" name="creative14"
+                                                                                        min="0" max="20"
+                                                                                        class="form-control"
+                                                                                        oninput="updateTotal(14)"></td>
+                                                                        <td><span id="total14">0</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>15</td>
+                                                                        <td>Rizzy Babilone</td>
+                                                                        <td><input type="number" name="dress15" min="0"
+                                                                                        max="20" class="form-control"
+                                                                                        oninput="updateTotal(15)"></td>
+                                                                        <td><input type="number" name="creative15"
+                                                                                        min="0" max="20"
+                                                                                        class="form-control"
+                                                                                        oninput="updateTotal(15)"></td>
+                                                                        <td><span id="total15">0</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>16</td>
+                                                                        <td>Kaijeaw moosab</td>
+                                                                        <td><input type="number" name="dress16" min="0"
+                                                                                        max="20" class="form-control"
+                                                                                        oninput="updateTotal(16)"></td>
+                                                                        <td><input type="number" name="creative16"
+                                                                                        min="0" max="20"
+                                                                                        class="form-control"
+                                                                                        oninput="updateTotal(16)"></td>
+                                                                        <td><span id="total16">0</span></td>
+                                                                </tr>
+                                                        </tbody>
+                                                </table>
+                                        </div>
+                                        <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                                                <button type="submit" class="btn btn-pink btn-lg px-5">ส่งคะแนน</button>
+                                                <button type="button" class="btn btn-secondary btn-lg px-5"
+                                                        onclick="window.history.back()">กลับ</button>
+                                                <button type="button" id="testBtn" class="btn btn-secondary ms-2"
+                                                        style="background: #1976d2; color: #fff;">
+                                                        Test ส่งคะแนน
+                                                </button>
                                         </div>
                                 </form>
                         </div>
                 </div>
         </div>
+        <!-- Popup ยืนยันส่งคะแนน -->
+        <div id="confirmModal" style="display:none;">
+                <div class="modal-backdrop"></div>
+                <div class="modal-card">
+                        <div class="modal-header">
+                                <h4>ยืนยันการส่งคะแนน</h4>
+                        </div>
+                        <div class="modal-body">
+                                <p style="font-size:1.09rem;">คุณต้องการส่งคะแนนหรือไม่?</p>
+                                <p style="color:#1976d2; margin-top:1.1em; font-size:.99rem;"><b>หมายเหตุ:</b>
+                                        ส่งหลังประกวดครบ 2 รอบเท่านั้น<br>และแต่ละกรรมการส่งได้เพียงครั้งเดียว</p>
+                        </div>
+                        <div class="modal-footer">
+                                <button id="modalCancel" type="button" class="btn btn-secondary">ยกเลิก</button>
+                                <button id="modalOk" type="button" class="btn btn-primary">ส่งคะแนน</button>
+                        </div>
+                </div>
+        </div>
+        <!-- Popup Alert Success -->
+        <div id="customAlert" style="display:none;">
+                <div class="custom-alert-card">
+                        <div class="icon-success">
+                                <svg width="38" height="38" viewBox="0 0 38 38">
+                                        <circle cx="19" cy="19" r="19" fill="#1976d2" />
+                                        <path d="M11 20.8l5.7 5.2c.5.5 1.3.5 1.7 0l8.6-8.8" fill="none" stroke="#fff"
+                                                stroke-width="2.5" stroke-linecap="round" />
+                                </svg>
+                        </div>
+                        <div class="custom-alert-msg">
+                                <b>ส่งคะแนนเรียบร้อยแล้ว</b><br>
+                                <span style="font-size:.98em; color:#1976d2;">(ไม่สามารถตรวจสอบผลลัพธ์ได้)</span>
+                        </div>
+                        <button id="closeAlertBtn" class="btn btn-primary">ปิด</button>
+                </div>
+        </div>
+
         <script src="score.js"></script>
 </body>
 
