@@ -1,9 +1,6 @@
 // รายชื่อผู้เข้าแข่งขัน (อัปเดตใหม่ 16 คน)
 const names = [
-  "Nene Jraaaaa", "John Win", "Auto Kill Omarterna", "Jennastalyst Bishop", "Tathuadin Band",
-  "NaiBao Winston", "Liss Cascio", "FlukeFic Jimiko", "JubJang JJ", "Sakura Mammoth",
-  "Blue Suwannaweth", "irene morgan", "Namsom Howhe", "Mewyu Watanabe", "Rizzy Babilone",
-  "Kaijeaw moosab"
+  "Auto Kill Omarterna", "tathuadin Band", "Liss Cascio", "	Sakura Mammoth", "	Namsom Howhe"
 ];
 
 // ฟังก์ชันรวมคะแนน
